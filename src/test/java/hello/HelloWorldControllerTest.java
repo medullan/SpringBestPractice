@@ -28,7 +28,7 @@ public class HelloWorldControllerTest extends TestCase {
      */
     public void testApp()
     {
-        assertTrue( true );
+        assertTrue(true);
     }
 
 }

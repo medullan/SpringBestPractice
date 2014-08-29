@@ -1,5 +1,7 @@
 package hello;
 
+import hello.util.ParseGreeting;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Controller;
@@ -27,7 +29,7 @@ public class HelloWorldController {
      */
     @RequestMapping(method=RequestMethod.GET)
     public @ResponseBody Greeting sayHello(@RequestParam(value="name", required=false, defaultValue="Stranger") String name)  {
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+        return ParseGreeting.GenerateGreeting("Kenny Edmond");
     }
 
 }
